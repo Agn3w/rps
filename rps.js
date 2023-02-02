@@ -34,7 +34,7 @@ function playRound() {
     else if (playerSelection == "rock" && computerSelection == "rock") {
         console.log("You: " + playerSelection);
         console.log("Computer: " + computerSelection);
-        return computerScore++
+        
     }
     
     else if (playerSelection == "paper" && computerSelection == "rock") {
