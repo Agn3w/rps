@@ -5,6 +5,7 @@ function getComputerChoice(items) {
 }
 
 const items = ["rock","paper","scissors"]
+const round = ["Round 1", "Round 2", "Round 3", "Round 4", "Round 5"]
 
 function userInput() {
     return prompt("Choose Your Weapon").toLowerCase()
@@ -14,6 +15,7 @@ let playerScore = 0
 let computerScore = 0
 
 function playRound() {
+     console.log(round[i])
      const playerSelection = userInput()
      const computerSelection = getComputerChoice(items)
 
@@ -73,7 +75,7 @@ function playRound() {
 
 
 function game() {
-    for (i = 0 ; i < 5 ; i++)
+    for (i = 0 ; i < round.length ; i++)
     playRound()  
     if (playerScore > computerScore) {
         console.log("You win!")
