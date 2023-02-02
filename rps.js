@@ -8,74 +8,84 @@ function userInput() {
     return prompt("Choose Your Weapon").toLowerCase()
 }
 
+let playerScore = 0
+let computerScore = 0
+
 function playRound() {
      const playerSelection = userInput()
      const computerSelection = getComputerChoice(items)
 
      if (playerSelection == "rock" && computerSelection == "paper") {
-        console.log("you lose, paper beats rock!");
-        console.log(playerSelection);
-        console.log(computerSelection);
+        console.log("You: " + playerSelection);
+        console.log("Computer: " + computerSelection);
+        return computerScore++
     }
     
     else if (playerSelection == "rock" && computerSelection == "scissors") {
-        console.log("you win, rock beats scissors!");
-        console.log(playerSelection);
-        console.log(computerSelection);
+        console.log("You: " + playerSelection);
+        console.log("Computer: " + computerSelection);
+        return playerScore ++
     }
     
     else if (playerSelection == "rock" && computerSelection == "rock") {
-        console.log("DRAW!");
-        console.log(playerSelection);
-        console.log(computerSelection);
+        console.log("You: " + playerSelection);
+        console.log("Computer: " + computerSelection);
+        return computerScore++
     }
     
     else if (playerSelection == "paper" && computerSelection == "rock") {
-        console.log("You win, paper beats rock!");
-        console.log(playerSelection);
-        console.log(computerSelection);
+        console.log("You: " + playerSelection);
+        console.log("Computer: " + computerSelection);
+        return playerScore++
     }
     
     else if (playerSelection == "paper" && computerSelection == "scissors") {
-        console.log("You lose, scissors beats paper!");
-        console.log(playerSelection);
-        console.log(computerSelection);
+        console.log("You: " + playerSelection);
+        console.log("Computer: " + computerSelection);
+        return computerScore++
     }
     
     else if (playerSelection == "paper" && computerSelection == "paper") {
-        console.log("DRAW!");
-        console.log(playerSelection);
-        console.log(computerSelection);
+        console.log("You: " + playerSelection);
+        console.log("Computer: " + computerSelection);
     }
     
     else if (playerSelection == "scissors" && computerSelection == "paper") {
-        console.log("You win, scissors beats paper!");
-        console.log(playerSelection);
-        console.log(computerSelection);
+        console.log("You: " + playerSelection);
+        console.log("Computer: " + computerSelection);
+        return playerScore++   
     }
     
     else if (playerSelection == "scissors" && computerSelection == "rock") {
-        console.log("You lose, rock beats scissors!");
-        console.log(playerSelection);
-        console.log(computerSelection);
+        console.log("You: " + playerSelection);
+        console.log("Computer: " + computerSelection);
+        return computerScore++
     }
     
     else if (playerSelection == "scissors" && computerSelection == "scissors") {
-        console.log("DRAW!");
-        console.log(playerSelection);
-        console.log(computerSelection);
+        console.log("You: " + playerSelection);
+        console.log("Computer: " + computerSelection);
     }
     
-    else {
-        console.log("ERROR");
-        console.log(playerSelection);
-        console.log(computerSelection);
-    }
 }
 
 
 function game() {
-
     for (i = 0 ; i < 5 ; i++)
-    playRound()    
+    playRound()  
+    if (playerScore > computerScore) {
+        console.log("You win!")
+    }
+    else if (computerScore > playerScore) {
+        console.log("You Lose!")
+    }
+    else {
+        console.log("DRAW!")
+    }
+    console.log("Your Score: " + playerScore)  
+    console.log("Computer's Score: " +computerScore)
 }
+
+
+
+
