@@ -1,3 +1,5 @@
+//open console and initialize with game();//
+
 function getComputerChoice(items) {
  return items[Math.floor(Math.random() * items.length)];
 }
