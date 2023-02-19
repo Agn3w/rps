@@ -1,5 +1,4 @@
 //open console and initialize with game();//
-
 function getComputerChoice(items) {
  return items[Math.floor(Math.random() * items.length)];
 }
@@ -7,16 +6,34 @@ function getComputerChoice(items) {
 const items = ["rock","paper","scissors"]
 const round = ["Round 1", "Round 2", "Round 3", "Round 4", "Round 5"]
 
-function userInput() {
-    return prompt("Choose Your Weapon").toLowerCase()
-}
-
 let playerScore = 0
 let computerScore = 0
 
+function userInput(choice){
+    return choice
+}
+
+const R = document.querySelector("#R");
+R.addEventListener("click", function(){
+    return playerSelection = "rock"
+});
+R.addEventListener("click", playRound);
+
+
+const P = document.querySelector("#P"); 
+P.addEventListener("click", function(){
+    return playerSelection = "paper"
+});
+P.addEventListener("click",playRound);
+
+const S = document.querySelector("#S");
+S.addEventListener("click", function(){
+    return playerSelection = "scissors"
+}); 
+S.addEventListener("click", playRound)
+
 function playRound() {
-     console.log(round[i])
-     const playerSelection = userInput()
+     
      const computerSelection = getComputerChoice(items)
 
      if (playerSelection == "rock" && computerSelection == "paper") {
@@ -72,24 +89,4 @@ function playRound() {
     }
     
 }
-
-
-function game() {
-    for (i = 0 ; i < round.length ; i++)
-    playRound()  
-    if (playerScore > computerScore) {
-        console.log("You win!")
-    }
-    else if (computerScore > playerScore) {
-        console.log("You Lose!")
-    }
-    else {
-        console.log("DRAW!")
-    }
-    console.log("Your Score: " + playerScore)  
-    console.log("Computer's Score: " +computerScore)
-}
-
-
-
 
