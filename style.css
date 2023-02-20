@@ -1,7 +1,18 @@
 .buttons{
 
   display: flex;
-  height: 600px;
+  height: 400px;
   align-items: center;
   justify-content: space-evenly;   
+}
+
+h1{
+    text-align: center;
+}
+h3{
+    text-align: center;
+}
+
+#score{
+    text-align: center;
 }
