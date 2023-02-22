@@ -24,3 +24,12 @@ h3{
 #score{
     text-align: center;
 }
+
+.anotherButton{
+    display: flex;
+    justify-content: center;
+}
+
+#reset{
+    width: 84.89px;
+}

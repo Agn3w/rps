@@ -63,3 +63,8 @@ function getComputerChoice(items) {
         }
        
        }
+
+       const reset = document.querySelector("#reset");
+       reset.addEventListener("click", function(){
+        location.reload()
+       } )
